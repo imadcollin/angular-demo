@@ -5,7 +5,7 @@ import 'rxjs/add/operator/map';
 import { Observable } from "rxjs/Observable";
 @Injectable()
 export class ProductService {
-    private _dataUrl='/api/data.json'
+    private _dataUrl='/assets/data.json'
     constructor(private _http: Http){
 
 
