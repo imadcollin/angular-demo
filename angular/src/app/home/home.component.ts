@@ -9,14 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-listFilter:string='';
-products:IProduct[];
-  constructor(private _productService: ProductService) { 
-  
+  listFilter: string = '';
+  products: IProduct[];
+  constructor(private _productService: ProductService) {
+
   }
 
-  ngOnInit() {
-this.products=this._productService.getProducts();
+  ngOnInit(): void {
+    this._productService.getProducts().subscribe(product => this.products = product);
   }
 
 }
