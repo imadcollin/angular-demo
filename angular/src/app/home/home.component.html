@@ -15,6 +15,22 @@
   <div class="main">
   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum recusandae consequatur, perspiciatis velit dolor magni rerum libero quos laudantium labore veritatis distinctio deleniti rem ex, ab assumenda quo ut nisi.</p>
   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum recusandae consequatur, perspiciatis velit dolor magni rerum libero quos laudantium labore veritatis distinctio deleniti rem ex, ab assumenda quo ut nisi.</p>
+  <table *ngIf='products &&products.length'>
+      <tr>
+    <th>productId</th>
+    <th>productName</th>
+    <th>productCode</th>
+    <th>releaseDate</th>
+    <th>price</th>
+  </tr>
+    <tr *ngFor='let pizza of products'>
+      <td>{{pizza.productId}}</td>
+      <td>{{pizza.productName}}</td>
+      <td>{{pizza.productCode}}</td>
+      <td>{{pizza.releaseDate}}</td>
+      <td>{{pizza.price}}</td>
+    </tr>
+  </table>
   </div>
   <div class="footer">
     <h1 class="pageTitle">Some text </h1>
