@@ -22,6 +22,7 @@
     <th>productCode</th>
     <th>releaseDate</th>
     <th>price</th>
+    <th>Image</th>
   </tr>
     <tr *ngFor='let pizza of products'>
       <td>{{pizza.productId}}</td>
@@ -29,6 +30,7 @@
       <td>{{pizza.productCode}}</td>
       <td>{{pizza.releaseDate}}</td>
       <td>{{pizza.price}}</td>
+      <td class="images"><img [src]='pizza.imageUrl' alt=""></td>
     </tr>
   </table>
   </div>
