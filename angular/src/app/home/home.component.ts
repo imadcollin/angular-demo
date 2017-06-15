@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
+listFilter:string='A';
 products:IProduct[]=[
   {
         "productId": 5,

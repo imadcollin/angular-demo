@@ -15,6 +15,11 @@
   <div class="main">
   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum recusandae consequatur, perspiciatis velit dolor magni rerum libero quos laudantium labore veritatis distinctio deleniti rem ex, ab assumenda quo ut nisi.</p>
   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum recusandae consequatur, perspiciatis velit dolor magni rerum libero quos laudantium labore veritatis distinctio deleniti rem ex, ab assumenda quo ut nisi.</p>
+  <div class="search">
+    <button type="button">Search</button>
+    <input type="text" [(ngModel)]='listFilter' name="searchText" value="search">
+  </div>
+  {{listFilter}}
   <table *ngIf='products &&products.length'>
       <tr>
     <th>productId</th>
@@ -24,7 +29,7 @@
     <th>price</th>
     <th>Image</th>
   </tr>
-    <tr *ngFor='let pizza of products'>
+    <tr *ngFor='let pizza of products|pizzesFilter:listFilter'>
       <td>{{pizza.productId}}</td>
       <td>{{pizza.productName}}</td>
       <td>{{pizza.productCode}}</td>
