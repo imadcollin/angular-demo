@@ -1,3 +1,4 @@
+import { detailGuarService } from './services/details.guard.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
@@ -21,13 +22,13 @@ import{RouterModule} from '@angular/router';
     HttpModule,
     RouterModule.forRoot([
       {path:'home',component:HomeComponent},
-      {path:'details/:id',component:ProductsDetailsComponent},
+      {path:'details/:id',canActivate:[detailGuarService],component:ProductsDetailsComponent},
       {path:'',redirectTo:'home',pathMatch:'full'},
       {path:'**',redirectTo:'home',pathMatch:'full'}
 
     ])
   ],
-  providers: [],
+  providers: [detailGuarService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
