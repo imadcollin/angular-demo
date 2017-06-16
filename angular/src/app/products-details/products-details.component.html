@@ -1,36 +1,27 @@
 <div class="wrapper">
 
   <div class="top">
-  <h1> Angular Demo </h1> 
-  <span>This is a sample for Angular</span>
+    <h1> Angular Demo </h1>
+    <span>This is a sample for Angular</span>
   </div>
-  
-  
-  <div class="main">
-  
-  <table *ngIf='products &&products.length'>
-      <tr>
-    <th>productId</th>
-    <th>productName</th>
-    <th>productCode</th>
-    <th>releaseDate</th>
-    <th>price</th>
-    <th>Image</th>
-  </tr>
-    <tr *ngFor='let pizza of products|pizzesFilter:listFilter'>
-      <td>{{pizza.productId}}</td>
-      <td>{{pizza.productName}}</td>
-      <td>{{pizza.productCode}}</td>
-      <td>{{pizza.releaseDate}}</td>
-      <td>{{pizza.price}}</td>
-      <td class="images"><img [src]='pizza.imageUrl' alt=""></td>
-    </tr>
-  </table>
-    <div class="search">
-      <button type="button" (click)='goBack()'>Back</button>
+
+  <div *ngIf='productMatchID'>
+    <table>
+      <tr>{{productMatchID.productName}}</tr>
+      <tr>{{productMatchID.price}}</tr>
+      <tr>{{productMatchID.releaseDate}}</tr>
+      <tr> {{productMatchID.productCode}}</tr>
+      <tr>{{productMatchID.price}}</tr>
+    <tr><img [src]='productMatchID.imageUrl' alt=""></tr>
+
+    </table>
+  </div>
+
+  <div class="search">
+    <button type="button" (click)='goBack()'>Back</button>
   </div>
   <div class="footer">
     <h1 class="pageTitle">Some text </h1>
   </div>
-  
+
 </div>
