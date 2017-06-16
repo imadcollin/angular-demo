@@ -17,16 +17,18 @@
         <td>ProductCode</td> {{productMatchID.productCode}}</tr>
       <tr>
         <td>price</td>{{productMatchID.price}}</tr>
-    <tr>
-      <td>Image</td><img [src]='productMatchID.imageUrl' alt=""></tr>
+    
     </table>
+    <div class="image-text-around">
+    <img src="https://images8.alphacoders.com/369/369063.jpg" alt="">
+    <span> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus eveniet, quam magni laudantium quas, molestiae libero recusandae harum ullam unde deleniti consequatur sint ipsam quis, dicta rem commodi culpa accusamus. </span>
+   <h2>ingredients</h2>
+    <span> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus eveniet, quam magni laudantium quas, molestiae libero recusandae harum ullam unde deleniti consequatur sint ipsam quis, dicta rem commodi culpa accusamus. </span>
+  </div>
   </div>
 
   <div class="search">
     <button type="button" (click)='goBack()'>Back</button>
   </div>
-  <div class="footer">
-    <h1 class="pageTitle">Some text </h1>
-  </div>
-
+ <app-footer> </app-footer>
 </div>
