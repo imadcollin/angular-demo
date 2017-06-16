@@ -20,14 +20,13 @@
       <span class="searchAdv">Please Check our Menu for more products 
 </span>
     </div>
-    {{listFilter}}
     <table *ngIf='products &&products.length'>
       <tr>
-        <th>productId</th>
-        <th>productName</th>
-        <th>productCode</th>
-        <th>releaseDate</th>
-        <th>price</th>
+        <th>ProductId</th>
+        <th>Product Name</th>
+        <th>Product Code</th>
+        <th>Release Date</th>
+        <th>Price</th>
         <th>Image</th>
       </tr>
       <tr *ngFor='let pizza of products|pizzesFilter:listFilter'>
@@ -35,14 +34,12 @@
         <td><a [routerLink]="['/details',pizza.productId]">  {{pizza.productName}}</a></td>
         <td>{{pizza.productCode}}</td>
         <td>{{pizza.releaseDate}}</td>
-        <td>{{pizza.price}}</td>
+        <td>{{pizza.price |currency:'USD':true}}</td>
         <td class="images"><img [src]='pizza.imageUrl' alt=""></td>
       </tr>
     </table>
   </div>
-  <!--<div class="footer">
-    <h1 class="pageTitle">Some text </h1>
-  </div>-->
 
- <app-footer></app-footer>
+
+  <app-footer></app-footer>
 </div>
