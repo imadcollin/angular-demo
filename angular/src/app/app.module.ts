@@ -9,7 +9,6 @@ import { HomeComponent } from './home/home.component';
 import { FilterPipe } from "app/home/product-filter";
 import { ProductsDetailsComponent } from './products-details/products-details.component';
 import{RouterModule} from '@angular/router';
-import { FooterComponentComponent } from './footer-component/footer-component.component';
 import { FooterComponent } from './footer/footer.component';
 @NgModule({
   declarations: [
@@ -17,7 +16,6 @@ import { FooterComponent } from './footer/footer.component';
     HomeComponent,
     FilterPipe,
     ProductsDetailsComponent,
-    FooterComponentComponent,
     FooterComponent
   ],
   imports: [
