@@ -32,7 +32,7 @@
   </tr>
     <tr *ngFor='let pizza of products|pizzesFilter:listFilter'>
       <td>{{pizza.productId}}</td>
-      <td>{{pizza.productName}}</td>
+      <td><a [routerLink]="['/details',pizza.productId]">  {{pizza.productName}}</a></td>
       <td>{{pizza.productCode}}</td>
       <td>{{pizza.releaseDate}}</td>
       <td>{{pizza.price}}</td>
