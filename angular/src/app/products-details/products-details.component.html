@@ -7,13 +7,18 @@
 
   <div *ngIf='productMatchID'>
     <table>
-      <tr>{{productMatchID.productName}}</tr>
-      <tr>{{productMatchID.price}}</tr>
-      <tr>{{productMatchID.releaseDate}}</tr>
-      <tr> {{productMatchID.productCode}}</tr>
-      <tr>{{productMatchID.price}}</tr>
-    <tr><img [src]='productMatchID.imageUrl' alt=""></tr>
-
+      <tr>
+        <td>ProductName</td>{{productMatchID.productName}}</tr>
+      <tr>
+        <td>Price</td>{{productMatchID.price}}</tr>
+      <tr>
+        <td>ReleaseDate</td>{{productMatchID.releaseDate}}</tr>
+      <tr>
+        <td>ProductCode</td> {{productMatchID.productCode}}</tr>
+      <tr>
+        <td>price</td>{{productMatchID.price}}</tr>
+    <tr>
+      <td>Image</td><img [src]='productMatchID.imageUrl' alt=""></tr>
     </table>
   </div>
 

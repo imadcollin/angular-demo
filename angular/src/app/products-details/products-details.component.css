@@ -1,2 +1,8 @@
 
 @import url( '../home/home.component.css'   );
+table{
+width: 100%;
+padding: 10%;
+font-family: 'Times New Roman', Times, serif;
+line-height: 200%;
+}
