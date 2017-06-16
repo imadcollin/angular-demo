@@ -1,47 +1,48 @@
 <div class="wrapper">
-  
+
   <div class="top">
-  <h1> Angular Demo </h1> 
-  <span>This is a sample for Angular</span>
+    <h1> Angular Demo </h1>
+    <span>This is a sample for Angular</span>
   </div>
-  
+
   <ul class="navigation">
-    
+
     <li><a [routerLink]="['/home']"> Home</a></li>
     <li><a [routerLink]="['/details']"> Details</a></li>
     <li><a href="" title="Portfolio">Portfolio</a>
-    <li><a href="" title="Contact">Contact</a></li>
-    <div class="clear"></div>
+      <li><a href="" title="Contact">Contact</a></li>
+      <div class="clear"></div>
   </ul>
   <div class="main">
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum recusandae consequatur, perspiciatis velit dolor magni rerum libero quos laudantium labore veritatis distinctio deleniti rem ex, ab assumenda quo ut nisi.</p>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum recusandae consequatur, perspiciatis velit dolor magni rerum libero quos laudantium labore veritatis distinctio deleniti rem ex, ab assumenda quo ut nisi.</p>
-  <div class="search">
-    <button type="button">Search</button>
-    <input type="text" [(ngModel)]='listFilter' name="searchText" value="search">
-  </div>
-  {{listFilter}}
-  <table *ngIf='products &&products.length'>
+    <div class="search">
+      <button type="button">Search</button>
+      <input type="text" [(ngModel)]='listFilter' name="searchText" value="search">
+      <span class="searchAdv">Please Check our Menu for more products 
+</span>
+    </div>
+    {{listFilter}}
+    <table *ngIf='products &&products.length'>
       <tr>
-    <th>productId</th>
-    <th>productName</th>
-    <th>productCode</th>
-    <th>releaseDate</th>
-    <th>price</th>
-    <th>Image</th>
-  </tr>
-    <tr *ngFor='let pizza of products|pizzesFilter:listFilter'>
-      <td>{{pizza.productId}}</td>
-      <td><a [routerLink]="['/details',pizza.productId]">  {{pizza.productName}}</a></td>
-      <td>{{pizza.productCode}}</td>
-      <td>{{pizza.releaseDate}}</td>
-      <td>{{pizza.price}}</td>
-      <td class="images"><img [src]='pizza.imageUrl' alt=""></td>
-    </tr>
-  </table>
+        <th>productId</th>
+        <th>productName</th>
+        <th>productCode</th>
+        <th>releaseDate</th>
+        <th>price</th>
+        <th>Image</th>
+      </tr>
+      <tr *ngFor='let pizza of products|pizzesFilter:listFilter'>
+        <td>{{pizza.productId}}</td>
+        <td><a [routerLink]="['/details',pizza.productId]">  {{pizza.productName}}</a></td>
+        <td>{{pizza.productCode}}</td>
+        <td>{{pizza.releaseDate}}</td>
+        <td>{{pizza.price}}</td>
+        <td class="images"><img [src]='pizza.imageUrl' alt=""></td>
+      </tr>
+    </table>
   </div>
-  <div class="footer">
+  <!--<div class="footer">
     <h1 class="pageTitle">Some text </h1>
-  </div>
-  
+  </div>-->
+
+ <app-footer></app-footer>
 </div>
